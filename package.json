@@ -30,15 +30,11 @@
     "dev": "vite build --watch",
     "lint": "eslint ./src --ext .js,.cjs,.mjs,.ts,.cts,.mts --ignore-path .gitignore",
     "prepare": "husky",
-    "prettier": "prettier --write './src/**/*.{js,ts,css,json,yaml,html}' './templates/**/*.html'"
+    "prettier": "prettier --write './**/*.{ts,json,yaml,yml,html}'"
   },
   "lint-staged": {
-    "./templates/**/*.html": [
+    "*.{ts,json,yaml,yml,html}": [
       "prettier --write"
-    ],
-    "./src/**/*.{js,ts,css,json,yaml,html}": [
-      "prettier --write",
-      "eslint --fix"
     ]
   },
   "devDependencies": {
