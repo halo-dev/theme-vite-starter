@@ -29,7 +29,17 @@
     "build": "tsc && vite build",
     "dev": "vite build --watch",
     "lint": "eslint ./src --ext .js,.cjs,.mjs,.ts,.cts,.mts --ignore-path .gitignore",
-    "prettier": "prettier --write './src/**/*.{js,ts,css,json,ml,yaml,html}' './templates/**/*.html'"
+    "prepare": "husky",
+    "prettier": "prettier --write './src/**/*.{js,ts,css,json,yaml,html}' './templates/**/*.html'"
+  },
+  "lint-staged": {
+    "./templates/**/*.html": [
+      "prettier --write"
+    ],
+    "./src/**/*.{js,ts,css,json,yaml,html}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
     "@types/node": "18.11.9",
@@ -38,6 +48,8 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^2.8.8",
     "typescript": "^4.9.5",
     "vite": "^5.1.6"
