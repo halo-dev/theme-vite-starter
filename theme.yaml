@@ -6,12 +6,15 @@ spec:
   displayName: Vite Starter
   author:
     name: Halo
-    website: https://www.halo.run
+    website: https://github.com/halo-dev
   description: A development starter theme with Vite Ecosystem for Halo
   logo: https://www.halo.run/logo
-  website: https://github.com/halo-dev/theme-vite-starter
+  homepage: https://github.com/halo-dev/theme-vite-starter
   repo: https://github.com/halo-dev/theme-vite-starter.git
   settingName: "theme-vite-starter-setting"
   configMapName: "theme-vite-starter-configMap"
   version: 1.0.0
-  require: ">=2.0.0"
+  requires: ">=2.0.0"
+  license:
+    - name: "GPL-3.0"
+      url: "https://github.com/halo-dev/theme-vite-starter/blob/main/LICENSE"
