@@ -13,10 +13,8 @@
       "prettier --write"
     ]
   },
-  "dependencies": {
-    "@halo-dev/theme-package-cli": "^1.0.0"
-  },
   "devDependencies": {
+    "@halo-dev/theme-package-cli": "^1.0.0",
     "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",

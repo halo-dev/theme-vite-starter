@@ -6,11 +6,10 @@ settings:
 
 importers:
   .:
-    dependencies:
+    devDependencies:
       "@halo-dev/theme-package-cli":
         specifier: ^1.0.0
         version: 1.0.0
-    devDependencies:
       "@types/node":
         specifier: 18.11.9
         version: 18.11.9
