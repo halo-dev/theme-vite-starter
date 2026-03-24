@@ -2,7 +2,7 @@
 
 一个集成了 Vite 的主题快速开始模板。
 
-主题开发文档可查阅：<https://docs.halo.run/2.0.0-SNAPSHOT/developer-guide/theme/prepare>
+主题开发文档可查阅：<https://docs.halo.run/developer-guide/theme/prepare>
 
 ## 开发
 
@@ -15,7 +15,7 @@ cd ~/halo2-dev/themes/theme-vite-starter
 ```
 
 ```bash
-pnpm install 
+pnpm install
 ```
 
 ```bash

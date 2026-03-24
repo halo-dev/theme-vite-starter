@@ -1,31 +1,28 @@
 {
-  "license": "GPL-3.0",
+  "type": "module",
   "scripts": {
-    "build": "tsc && vite build && theme-package",
-    "build-only": "tsc && vite build",
-    "dev": "vite build --watch",
-    "lint": "eslint ./src --ext .js,.cjs,.mjs,.ts,.cts,.mts --ignore-path .gitignore",
-    "prepare": "husky",
-    "prettier": "prettier --write './**/*.{ts,json,yaml,yml,html}'"
-  },
-  "lint-staged": {
-    "*.{ts,json,yaml,yml,html}": [
-      "prettier --write"
-    ]
+    "build": "tsc && vp build && theme-package",
+    "build-only": "tsc && vp build",
+    "dev": "vp build --watch",
+    "lint": "vp lint",
+    "prepare": "vp config",
+    "fmt": "vp fmt"
   },
   "devDependencies": {
-    "@halo-dev/theme-package-cli": "^1.0.0",
+    "@halo-dev/theme-package-cli": "^1.0.1",
     "@types/node": "18.11.9",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
-    "prettier": "^2.8.8",
     "typescript": "^4.9.5",
-    "vite": "^5.4.16"
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vite-plus": "latest"
   },
-  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ],
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    }
+  }
 }
