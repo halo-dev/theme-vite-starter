@@ -4,18 +4,18 @@
     "build": "tsc && vp build && theme-package",
     "build-only": "tsc && vp build",
     "dev": "vp build --watch",
-    "lint": "vp lint",
-    "prepare": "vp config",
-    "fmt": "vp fmt"
+    "check": "vp check --fix",
+    "prepare": "vp config"
   },
   "devDependencies": {
     "@halo-dev/theme-package-cli": "^1.0.1",
+    "@halo-dev/vite-plugin-halo-theme": "^1.0.3",
     "@types/node": "18.11.9",
-    "typescript": "^4.9.5",
+    "typescript": "^5.9.3",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vite-plus": "latest"
   },
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@10.33.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"

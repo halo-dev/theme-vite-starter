@@ -1,19 +1,8 @@
-import path from "path";
-import { fileURLToPath } from "url";
-
+import { haloThemePlugin } from "@halo-dev/vite-plugin-halo-theme";
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
-  build: {
-    outDir: fileURLToPath(new URL("./templates/assets/dist", import.meta.url)),
-    emptyOutDir: true,
-    lib: {
-      entry: path.resolve(process.cwd(), "src/main.ts"),
-      name: "main",
-      fileName: "main",
-      formats: ["iife"],
-    },
-  },
+  plugins: [haloThemePlugin()],
   lint: { options: { typeAware: true, typeCheck: true } },
   fmt: {
     printWidth: 100,
@@ -23,6 +12,7 @@ export default defineConfig({
     sortPackageJson: true,
     insertFinalNewline: true,
     sortImports: {},
+    sortTailwindcss: {},
     ignorePatterns: [],
   },
   staged: {
