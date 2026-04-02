@@ -9,7 +9,7 @@
 | 类别     | 说明                                                                                                                                                                                                  |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 运行时   | Halo 使用 **Thymeleaf** 渲染主题；模板变量与 Finder API 随 Halo 版本演进，请以[官方文档](https://docs.halo.run/developer-guide/theme/prepare)为准。                                                   |
-| 构建     | **Vite**（依赖 `@voidzero-dev/vite-plus-core`；通过 [vite-plus](https://www.npmjs.com/package/vite-plus) 的 `vp` CLI 集成格式化、Lint 等）                                                            |
+| 构建     | Vite，同时集成 [Vite Plus](https://viteplus.dev/)，集成格式化、Lint 等功能                                                                                                                            |
 | 语言     | **TypeScript**（`tsc` 参与 `build` 脚本）                                                                                                                                                             |
 | 主题插件 | [`@halo-dev/vite-plugin-halo-theme`](https://www.npmjs.com/package/@halo-dev/vite-plugin-halo-theme) — 源码见 [halo-sigs/vite-plugin-halo-theme](https://github.com/halo-sigs/vite-plugin-halo-theme) |
 | 打包发布 | [`@halo-dev/theme-package-cli`](https://github.com/halo-dev/theme-package-cli) — 将主题打成 ZIP 供控制台上传                                                                                          |
