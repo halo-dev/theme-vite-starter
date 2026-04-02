@@ -1,0 +1,4 @@
+interface:
+  display_name: "Halo Theme Development"
+  short_description: "Build Halo CMS themes with Thymeleaf"
+  default_prompt: "Help me create a Halo theme"

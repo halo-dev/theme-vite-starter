@@ -5,7 +5,8 @@
     "build-only": "tsc && vp build",
     "dev": "vp build --watch",
     "check": "vp check --fix",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "skills:update": "npx skills update"
   },
   "devDependencies": {
     "@halo-dev/theme-package-cli": "^1.0.1",

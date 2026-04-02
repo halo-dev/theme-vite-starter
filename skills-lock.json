@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "halo-theme-dev": {
+      "source": "halo-dev/dev-skills",
+      "sourceType": "github",
+      "computedHash": "f6b0a799298f6f729366fdad175662fa7386e615839ad4af807285954969a9f4"
+    }
+  }
+}
