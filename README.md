@@ -67,10 +67,9 @@ pnpm build-only
 
 ## 其他脚本
 
-| 命令           | 作用                        |
-| -------------- | --------------------------- |
-| `pnpm check`   | `vp check --fix`（Lint 等） |
-| `pnpm prepare` | `vp config`（项目准备）     |
+| 命令         | 作用                        |
+| ------------ | --------------------------- |
+| `pnpm check` | `vp check --fix`（Lint 等） |
 
 ## Agent Skills
 
