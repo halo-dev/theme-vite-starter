@@ -9,11 +9,11 @@
     "skills:update": "npx skills update"
   },
   "devDependencies": {
-    "@halo-dev/theme-package-cli": "^1.0.1",
+    "@halo-dev/theme-package-cli": "^1.2.0",
     "@halo-dev/vite-plugin-halo-theme": "^1.0.3",
     "@types/node": "18.11.9",
-    "typescript": "^5.9.3",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "typescript": "^5.9.3",
     "vite-plus": "latest"
   },
   "packageManager": "pnpm@10.33.0",

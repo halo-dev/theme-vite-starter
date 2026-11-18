@@ -13,8 +13,8 @@ importers:
   .:
     devDependencies:
       '@halo-dev/theme-package-cli':
-        specifier: ^1.0.1
-        version: 1.0.1
+        specifier: ^1.2.0
+        version: 1.2.0
       '@halo-dev/vite-plugin-halo-theme':
         specifier: ^1.0.3
         version: 1.0.3(@voidzero-dev/vite-plus-core@0.1.19(@types/node@18.11.9)(typescript@5.9.3)(yaml@2.8.3))(axios@1.14.0)
@@ -38,8 +38,8 @@ packages:
     peerDependencies:
       axios: ^1.12.*
 
-  '@halo-dev/theme-package-cli@1.0.1':
-    resolution: {integrity: sha512-9pm8qVE30M9gCdpX7EB1FW/kBszRSkJvnwDChqdLyG+faBlIKXEDkazNHxDD9JjdW5GwStnQJ1IvQ/qgEFuiYQ==}
+  '@halo-dev/theme-package-cli@1.2.0':
+    resolution: {integrity: sha512-46YOqTiw+IRZ+YbkJZnA7Cke4iE+IBd/Sb7ZyABe8K/s5TO6YeA0s1tw3GJGqaHWbhiXxmeIpwdrTGo8z/7YNg==}
     hasBin: true
 
   '@halo-dev/vite-plugin-halo-theme@1.0.3':
@@ -727,6 +727,10 @@ packages:
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
+  ignore@7.0.16:
+    resolution: {integrity: sha512-52N+Y4HRMOJmbLmr+DqO4iSRyyB7N52gm7PWCT6h0p978+oKbqHCB7gIJIwZvBUsjlSdWbrBFqUSmIFNZMpn0A==}
+    engines: {node: '>= 4'}
+
   inherits@2.0.3:
     resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==}
 
@@ -925,6 +929,10 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
+  picomatch@4.0.7:
+    resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
+    engines: {node: '>=12'}
+
   pixelmatch@7.1.0:
     resolution: {integrity: sha512-1wrVzJ2STrpmONHKBy228LM1b84msXDUoAzVEl0R8Mz4Ce6EPr+IVtxm8+yvrqLYMHswREkjYFaMxnyGnaY3Ng==}
     hasBin: true
@@ -1118,13 +1126,15 @@ snapshots:
       axios: 1.14.0
       qs: 6.15.0
 
-  '@halo-dev/theme-package-cli@1.0.1':
+  '@halo-dev/theme-package-cli@1.2.0':
     dependencies:
       archiver: 7.0.1
       commander: 13.1.0
       fs-extra: 11.3.4
+      ignore: 7.0.16
       js-yaml: 4.1.1
       path: 0.12.7
+      picomatch: 4.0.7
 
   '@halo-dev/vite-plugin-halo-theme@1.0.3(@voidzero-dev/vite-plus-core@0.1.19(@types/node@18.11.9)(typescript@5.9.3)(yaml@2.8.3))(axios@1.14.0)':
     dependencies:
@@ -1597,6 +1607,8 @@ snapshots:
 
   ieee754@1.2.1: {}
 
+  ignore@7.0.16: {}
+
   inherits@2.0.3: {}
 
   inherits@2.0.4: {}
@@ -1783,6 +1795,8 @@ snapshots:
   picocolors@1.1.1: {}
 
   picomatch@4.0.4: {}
+
+  picomatch@4.0.7: {}
 
   pixelmatch@7.1.0:
     dependencies:
