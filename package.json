@@ -11,19 +11,10 @@
   "devDependencies": {
     "@halo-dev/theme-package-cli": "^1.2.0",
     "@halo-dev/vite-plugin-halo-theme": "^1.0.3",
-    "@types/node": "18.11.9",
-    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-    "typescript": "^5.9.3",
-    "vite-plus": "latest"
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
   },
-  "packageManager": "pnpm@10.33.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ],
-    "overrides": {
-      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
-    }
-  }
+  "packageManager": "pnpm@12.21.0"
 }

@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - esbuild
+overrides:
+  vite@*: "catalog:"
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@8.3.8000
+  vite-plus: 1.7.0
