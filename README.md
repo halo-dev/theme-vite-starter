@@ -27,6 +27,8 @@
 ├── templates/           # 构建生成
 ├── theme.yaml           # 主题元数据（必填）
 ├── settings.yaml        # 控制台主题设置表单（可选）
+├── docker-compose.yaml  # 本地 Halo 开发环境
+├── workplace/           # Docker Compose 的 Halo 数据目录（已 gitignore）
 ├── vite.config.ts
 └── package.json
 ```
@@ -49,7 +51,52 @@ pnpm dev
 
 `pnpm dev` 等价于对主题执行 `vp build --watch`：修改 `src/` 后会持续重新生成 `templates/`。将主题目录链到或复制到 Halo 的 `themes/<metadata.name>/` 后，在控制台安装并启用主题即可预览。
 
-开发 Halo 端建议关闭 Thymeleaf 缓存（例如环境变量 `SPRING_THYMELEAF_CACHE=false` 或配置 `spring.thymeleaf.cache: false`），便于模板热更新调试。
+使用自己的 Halo 环境时，建议关闭 Thymeleaf 缓存（例如环境变量 `SPRING_THYMELEAF_CACHE=false` 或配置 `spring.thymeleaf.cache: false`），便于模板热更新调试。
+
+### 使用 Docker Compose 启动 Halo
+
+仓库内置 `docker-compose.yaml`，可快速拉起一个用于主题开发的 Halo 实例。该实例使用 H2 数据库，数据保存在 `workplace/`（已加入 `.gitignore`）。
+
+Halo 只读取构建后的 `templates/`，因此需要先启动构建：
+
+```bash
+pnpm install
+
+# 终端 A：持续构建 templates/
+pnpm dev
+
+# 终端 B：启动 Halo
+docker compose up -d
+```
+
+如果不需要持续构建，也可以先执行 `pnpm build-only`，再启动容器。
+
+首次启动后：
+
+1. 打开 <http://localhost:8090>，完成管理员初始化。
+2. 进入 Console → 主题 → 切换主题 → 「未安装」，安装 `theme-vite-starter` 并启用。
+3. 修改 `src/` 后，`pnpm dev` 会更新 `templates/`，刷新页面即可看到效果。compose 已通过环境变量 `SPRING_THYMELEAF_CACHE=false` 关闭 Thymeleaf 缓存。
+
+常用命令：
+
+```bash
+docker compose logs -f halo   # 查看 Halo 日志
+docker compose down           # 停止并删除容器，保留 workplace/ 数据
+```
+
+彻底重置开发环境（会丢失站点内容，需要重新初始化）：
+
+```bash
+docker compose down
+rm -rf workplace
+```
+
+注意事项：
+
+- `templates/` 是构建产物且未纳入版本控制，未构建时直接启动会因缺少模板导致页面为空。
+- 如需修改端口，请同时调整 compose 中的 `ports` 和 `--halo.external-url`。
+- 主题在容器内的目录名固定为 `theme-vite-starter`，需与 `theme.yaml` 的 `metadata.name` 保持一致；重命名主题时也要同步修改 compose 的挂载目标。
+- 该配置使用 H2 数据库，仅适合本地开发；生产环境请使用 PostgreSQL 等外部数据库。
 
 ## 构建与打包
 
