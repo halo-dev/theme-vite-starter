@@ -3,7 +3,7 @@ import { defineConfig } from "vite-plus";
 
 export default defineConfig({
   plugins: [haloThemePlugin()],
-  lint: { options: { typeAware: true, typeCheck: true }, ignorePatterns: [".agents"] },
+  lint: { options: { typeAware: true, typeCheck: true }, ignorePatterns: [".agents", ".claude"] },
   fmt: {
     printWidth: 100,
     tabWidth: 2,
@@ -13,7 +13,7 @@ export default defineConfig({
     insertFinalNewline: true,
     sortImports: {},
     sortTailwindcss: {},
-    ignorePatterns: [".agents"],
+    ignorePatterns: [".agents", ".claude"],
   },
   staged: {
     "*": ["vp check"],
